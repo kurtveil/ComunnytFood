@@ -11,6 +11,7 @@ import { PagesComponent } from './pages.component';
 // Modulos
 import { SharedModule } from '../shared/shared.module';
 // import { ComponentsModule } from '../components/components.module';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -24,6 +25,7 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     SharedModule,
     RouterModule,
+    MaterialModule
     // ComponentsModule,
   ],
   exports: [

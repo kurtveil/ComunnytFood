@@ -6,7 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MaterialModule } from '../material/material.module';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -14,16 +15,16 @@ import { MaterialModule } from '../material/material.module';
     LoginComponent,
     RegisterComponent,
   ],
-  exports: [
-    LoginComponent,
-    RegisterComponent,
-  ],
   imports: [
+    MaterialModule,
     CommonModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
-  ]
+  ],
+  exports: [
+    LoginComponent,
+    RegisterComponent,
+  ],
 })
 export class AuthModule { }
