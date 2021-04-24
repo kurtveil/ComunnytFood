@@ -47,14 +47,15 @@ export class UsuarioService {
   }
 
   login(formData: LoginForm): any {
-    return this.http.post(`${urlBase}/login`, formData)
-      .pipe(
-        tap(
-          (res: any) => {
-            console.log(res);
-            localStorage.setItem('token', res.token);
-          })
-      );
+    return console.log('login');
+    // return this.http.post(`${urlBase}/login`, formData)
+    //   .pipe(
+    //     tap(
+    //       (res: any) => {
+    //         console.log(res);
+    //         localStorage.setItem('token', res.token);
+    //       })
+    //   );
   }
 
 }

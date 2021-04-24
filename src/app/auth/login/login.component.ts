@@ -32,18 +32,18 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log(this.loginForm.value);
-    this.usuarioService.login(this.loginForm.value).subscribe((res) => {
-      if (this.loginForm.get('remember').value) {
-        localStorage.setItem('email', this.loginForm.get('email').value);
-      } else {
-        localStorage.removeItem('email');
-      }
-      // Navegar al dashboard
-      this.router.navigateByUrl(`/`);
-    }, (err) => {
-      // Si sucede un error
-      // swal.fire('Error', err.error.msg, 'error');
-    });
+    this.router.navigateByUrl(`/dashboard`);
+    // this.usuarioService.login(this.loginForm.value).subscribe((res) => {
+    //   if (this.loginForm.get('remember').value) {
+    //     localStorage.setItem('email', this.loginForm.get('email').value);
+    //   } else {
+    //     localStorage.removeItem('email');
+    //   }
+    //   // Navegar al dashboard
+    // }, (err) => {
+    //   // Si sucede un error
+    //   // swal.fire('Error', err.error.msg, 'error');
+    // });
 
   }
 

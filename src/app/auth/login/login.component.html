@@ -1,31 +1,32 @@
-<div class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);">
-<form action=""  class="loginForm" [formGroup]="loginForm" (ngSubmit)="login()" >
+<div class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);" >
 
-  <a href="javascript:void(0)" class="text-center db"><img src="../assets/images/logo-icon.png" alt="Home" /><br/><img src="../assets/images/logo-text.png" alt="Home" /></a>
-  <div style="margin-top: 10px;">
-    <mat-form-field appearance="fill" >
-      <mat-label>Correo</mat-label>
-      <input matInput formControlName="email" >
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Contraseña</mat-label>
-      <input matInput formControlName="password">
-    </mat-form-field>
-    <section class="example-section">
-      <mat-checkbox class="example-margin" formControlName="remember">Recuerdame!</mat-checkbox>
-    </section>
-      <div style="text-align: center; margin: 10px;">
-          <button mat-raised-button color="primary" type="submit">
-           Iniciar Sesión
-          </button>
+  <div class="login-box">
+    <div class="card">
+
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
+        <a href="javascript:void(0)" class="text-center db"><img src="../assets/images/logo-icon.png" alt="Home" /><br/><img src="../assets/images/logo-text.png" alt="Home" /></a>
+      <mat-form-field appearance="fill" >
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="email" >
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="password" type="password">
+      </mat-form-field>
+      <section class="example-section">
+        <mat-checkbox class="example-margin" formControlName="remember">Recuerdame!</mat-checkbox>
+      </section>
+            <button mat-raised-button color="primary" type="submit" style="text-align: center; margin: 10px;">
+             Iniciar Sesión
+            </button>
+        <div style="margin-top: 10px;">
+          <div >
+              No tienes una cuenta? <a routerLink="/register" ><strong>Registrarse</strong></a>
+          </div>
       </div>
-      <div style="margin-top: 10px;">
-        <div >
-            No tienes una cuenta? <a routerLink="/register" class="text-primary m-l-5"><strong>Registrarse</strong></a>
-        </div>
+    </form>
     </div>
   </div>
-</form>
 </div>
 

@@ -31,6 +31,7 @@ Login register and recover password Page
 .login-box {
   width: 400px;
   margin: 0 auto;
+  background: white;
 }
 .login-box .footer {
   width: 100%;
@@ -55,13 +56,12 @@ Login register and recover password Page
   position: absolute;
   height: 100%;
 }
+.card {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+.form {
+  display: grid !important;
+}
 
 
-mat-grid-tile {
-  background: lightblue;
-}
-.loginForm{
-  display: flow-root;
-  float: right;
-  margin: 30px;
-}
