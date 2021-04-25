@@ -1,16 +1,16 @@
 <div class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);" >
+<div class="login-box">
+  <div class="card" style="text-align: center;">
 
-  <div class="login-box">
-    <div class="card">
+  <a href="javascript:void(0)" ><img src="../assets/images/logo-icon.png" alt="Home" /><br/><img src="../assets/images/logo-text.png" alt="Home" /></a>
 
-      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
-        <a href="javascript:void(0)" class="text-center db"><img src="../assets/images/logo-icon.png" alt="Home" /><br/><img src="../assets/images/logo-text.png" alt="Home" /></a>
-      <mat-form-field appearance="fill" >
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form" style="text-align: center;">
+      <mat-form-field appearance="fill" [style.width.%]="100">
         <mat-label>Correo</mat-label>
         <input matInput formControlName="email" >
       </mat-form-field>
       <br>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" [style.width.%]="100">
         <mat-label>Contraseña</mat-label>
         <input matInput formControlName="password" type="password">
       </mat-form-field>

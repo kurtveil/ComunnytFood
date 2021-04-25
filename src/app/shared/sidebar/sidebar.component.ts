@@ -12,7 +12,9 @@ export class SidebarComponent implements OnInit {
   public mobileQuery: MediaQueryList;
   public menuItems: any[];
   private _mobileQueryListener: () => void;
-  public fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  public fillerNav = [
+    'Compras'
+  ];
 
   public fillerContent = Array.from({length: 50}, () =>
       `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
