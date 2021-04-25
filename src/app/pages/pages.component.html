@@ -1,35 +1,26 @@
 
-<div id="main-wrapper">
-  <app-header></app-header>
-  <!-- <app-sidebar></app-sidebar> -->
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
 
-  <div class="page-wrapper">
-    <div class="container-fluid">
-      <!--Breadcrumbs-->
-      <!-- <app-breadcrumbs></app-breadcrumbs> -->
+  <app-header (click)="snav.toggle()"></app-header>
 
-      <!-- Mi sistema de rutas-->
-      <router-outlet></router-outlet>
 
-      <!-- <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
+   <!---------------->
+   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
 
-                </div>
-            </div>
-        </div>
-    </div> -->
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
 
-    </div>
-     <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer">
-              © 2021 Admin Pro by wrappixel.com
-          </footer>
-          <!-- ============================================================== -->
-          <!-- End footer -->
-          <!-- ============================================================== -->
-  </div>
+      <mat-nav-list>
+        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+      </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p *ngFor="let content of fillerContent">{{content}}</p>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+  <!---------------->
 </div>
+

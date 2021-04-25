@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,13 @@ import { MaterialModule } from './material/material.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+// import {DemoMaterialModule} from './app/material-module';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+
+// import {SidenavResponsiveExample} from './app/sidenav-responsive-example';
 
 @NgModule({
   declarations: [
@@ -20,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     PagesModule,
     BrowserAnimationsModule,
     AuthModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
 
   ],
   providers: [MaterialModule],
