@@ -4,7 +4,6 @@ import { RegisterForm } from '../auth/interfaces/register-form.interface';
 import { environment } from '../../environments/environment';
 import { LoginForm } from '../auth/interfaces/login-form.interface';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
 const urlBase = environment.base_url;
 @Injectable({

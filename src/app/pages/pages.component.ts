@@ -12,9 +12,9 @@ declare function customInitFunctions();
 export class PagesComponent implements OnInit {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
-  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  fillerNav = Array.from({length: 5}, (_, i) => `Nav Item ${i + 1}`);
 
-  fillerContent = Array.from({length: 50}, () =>
+  fillerContent = Array.from({length: 5}, () =>
       `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
